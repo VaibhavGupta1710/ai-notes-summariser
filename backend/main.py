@@ -21,6 +21,22 @@ class NotesInput(BaseModel):
 @app.get("/")
 def home():
     return {"message": "AI Notes App is running"}
+import language_tool_python
+
+tool = language_tool_python.LanguageTool('en-US')
+
+@app.post("/check-grammar")
+def check_grammar(notes: NotesInput):
+    matches = tool.check(notes.text)
+    errors = []
+    for match in matches:
+        errors.append({
+            "message": match.message,
+            "suggestion": match.replacements[:3] if match.replacements else [],
+            "offset": match.offset,
+            "length": match.error_length
+        })
+    return {"errors": errors, "error_count": len(errors)}
 
 @app.post("/summarise")
 def summarise(notes: NotesInput):

@@ -108,3 +108,33 @@ button:disabled {
     opacity: 0.8;
     cursor: not-allowed;
 }
+.grammar-box {
+    margin-top: 16px;
+    padding: 16px;
+    background: #fff8f0;
+    border-radius: 8px;
+    border-left: 4px solid #f0a500;
+}
+
+.grammar-box h2 {
+    font-size: 15px;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.error-item {
+    padding: 8px 0;
+    border-bottom: 0.5px solid #eee;
+    font-size: 13px;
+    color: #444;
+    line-height: 1.6;
+}
+
+#grammar-btn {
+    margin-top: 10px;
+    background: #f0a500;
+}
+
+#grammar-btn:hover {
+    background: #d4920a;
+}
