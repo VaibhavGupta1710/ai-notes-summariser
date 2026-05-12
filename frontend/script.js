@@ -15,7 +15,7 @@ button.addEventListener("click", async () => {
     button.disabled = true;
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/summarise", {
+        const response = await fetch("/summarise", { 
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -51,7 +51,7 @@ grammarBtn.addEventListener("click", async () => {
     grammarBtn.disabled = true;
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/check-grammar", {
+        const response = await fetch("/check-grammar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
