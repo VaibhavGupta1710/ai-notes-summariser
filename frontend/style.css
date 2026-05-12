@@ -88,3 +88,23 @@ button:hover {
 .hidden {
     display: none;
 }
+.spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid white;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+button:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+}

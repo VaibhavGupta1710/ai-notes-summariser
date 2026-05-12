@@ -10,7 +10,8 @@ button.addEventListener("click", async () => {
         return;
     }
 
-    button.textContent = "Summarising...";
+    // Show loading state
+    button.innerHTML = `<span class="spinner"></span> Summarising...`;
     button.disabled = true;
 
     try {
@@ -30,6 +31,7 @@ button.addEventListener("click", async () => {
         alert("Something went wrong. Is the backend running?");
     }
 
-    button.textContent = "Summarise";
+    // Reset button
+    button.innerHTML = "Summarise";
     button.disabled = false;
 });
