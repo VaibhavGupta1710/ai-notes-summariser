@@ -3,29 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Notes Summariser</title>
+    <title>NoteGenius — AI Notes Summariser</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>AI Notes Summariser</h1>
-        <p class="subtitle">Paste your notes and get an instant summary</p>
-        
-        <textarea id="notes-input" placeholder="Paste your notes here..."></textarea>
-        <button id="grammar-btn">Check Grammar</button>
+    <nav>
+        <div class="logo">Note<span>Genius</span></div>
+        <p class="tagline">Powered by AI</p>
+    </nav>
 
-    <div id="grammar-result" class="grammar-box hidden">
-        <h2>Grammar Issues</h2>
-        <div id="grammar-list"></div>
+    <div class="hero">
+        <h1>Summarise your notes<br><span>in seconds</span></h1>
+        <p class="subtitle">Paste your notes, check grammar, and get an instant AI summary</p>
     </div>
-        
-        <button id="summarise-btn">Summarise</button>
-        
-        <div id="result" class="result hidden">
-            <h2>Summary</h2>
-            <p id="summary-text"></p>
+
+    <div class="container">
+        <div class="card">
+            <label>Your Notes</label>
+            <textarea id="notes-input" placeholder="Paste your notes here..."></textarea>
+            
+            <div class="btn-group">
+                <button id="grammar-btn" class="btn-secondary">Check Grammar</button>
+                <button id="summarise-btn" class="btn-primary">Summarise</button>
+            </div>
+
+            <div id="grammar-result" class="result-box grammar-box hidden">
+                <div class="result-header">
+                    <span class="dot orange"></span>
+                    <h2>Grammar Issues</h2>
+                </div>
+                <div id="grammar-list"></div>
+            </div>
+
+            <div id="result" class="result-box hidden">
+                <div class="result-header">
+                    <span class="dot purple"></span>
+                    <h2>Summary</h2>
+                </div>
+                <p id="summary-text"></p>
+            </div>
         </div>
     </div>
+
     <script src="/static/script.js"></script>
 </body>
 </html>
